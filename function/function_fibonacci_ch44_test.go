@@ -15,7 +15,6 @@ func fib() func() int {
 
 		return a
 	}
-
 }
 
 func TestFibonacci(t *testing.T) {
@@ -24,11 +23,9 @@ func TestFibonacci(t *testing.T) {
 
 		fibonacci 함수를 구현합니다. 이 함수는 이어지는 피보나치 수를 반환하는 함수 (클로져)를 반환해야 합니다.
 	*/
-
 	f := fib()
 
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println(f())
 	}
-
 }
