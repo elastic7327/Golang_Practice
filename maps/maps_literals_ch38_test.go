@@ -7,9 +7,9 @@ import (
 
 func TestMapsLiterals(t *testing.T) {
 	var m = map[string]Vertex{
-		"Bell Labs": Vertex{
+		"Bell Labs": {
 			3.14, 3.141592,
-		}, "Google labs": Vertex{
+		}, "Google labs": {
 			-99, -99999,
 		},
 	}
