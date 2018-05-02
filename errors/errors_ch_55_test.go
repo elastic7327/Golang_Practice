@@ -1,0 +1,31 @@
+package errors
+
+import (
+	"fmt"
+	"testing"
+	"time"
+)
+
+type MyError struct {
+	When time.Time
+	What string
+}
+
+func (e *MyError) Error() string {
+	return fmt.Sprintf("at %v, %s",
+		e.When, e.What)
+
+}
+
+func run() error {
+	return &MyError{
+		time.Now(),
+		"it didn't work",
+	}
+}
+
+func TestErrors(t *testing.T) {
+	if err := run(); err != nil {
+		fmt.Println(err)
+	}
+}
