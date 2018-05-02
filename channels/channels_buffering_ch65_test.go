@@ -19,7 +19,7 @@ func TestBufferingChannels(t *testing.T) {
 
 	c := make(chan int, 2)
 	c <- 1
-	c <- 20000000000000000000
+	c <- 2
 
 	fmt.Println(<-c)
 	fmt.Println(<-c)
