@@ -37,6 +37,7 @@ func TestMethodAndInterface(t *testing.T) {
 	*/
 
 	var a Abser
+
 	f := MMyFloat(-math.Sqrt2)
 
 	v := VVertex{3, 4}
